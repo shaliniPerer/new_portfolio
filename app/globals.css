@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui;
+  --font-mono: var(--font-mono), ui-monospace, SFMono-Regular;
+  --color-neon-green: #86efac;
+  --color-matrix-green: #a7f3d0;
+  --color-terminal-gray: #71717a;
+  --color-dark-green: #143a21;
+}
+
+@utility scanlines {
+  background: linear-gradient(
+    rgba(10, 10, 12, 0) 50%, 
+    rgba(0, 0, 0, 0.3) 50%
+  );
+  background-size: 100% 4px;
+}
+
+@utility code-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 255, 102, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 102, 0.035) 1px, transparent 1px);
+}
+
+@utility text-glow {
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.5), 0 0 20px rgba(57, 255, 20, 0.2);
+}
+
+@utility text-glow-subtle {
+  text-shadow: 0 0 6px rgba(57, 255, 20, 0.3);
+}
+
+@utility border-glow {
+  box-shadow: 0 0 12px rgba(57, 255, 20, 0.15), inset 0 0 8px rgba(57, 255, 20, 0.05);
+}
+
+@utility border-glow-green {
+  border-color: rgba(57, 255, 20, 0.5);
+  box-shadow: 0 0 15px rgba(57, 255, 102, 0.25);
+}
+
+@utility bg-grid-light {
+  background-size: 16px 16px;
+  background-image: radial-gradient(rgba(0, 255, 102, 0.08) 1px, transparent 1px);
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #86efac }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Custom interactive scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #86efac;
+}
+
+/* Base custom interactive adjustments */
+html {
+  color-scheme: dark;
+}
+body {
+  background-color: #030303;
+}

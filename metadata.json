@@ -1,0 +1,6 @@
+{
+  "name": "Full Stack Developer Portfolio",
+  "description": "A futuristic coding-themed developer portfolio website featuring a terminal layout, skills command deck, projects code editor, and active contact terminal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
